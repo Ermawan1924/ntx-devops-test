@@ -24,14 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Run tests
-      - name: Run tests
-        run: npm test  # This will run the tests defined in your package.json file
-
-      # Step 5: Deploy to Server (RHEL) using SSH
-      - name: Deploy to RHEL Lab
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          script: |
-            npm install  # Install the necessary dependencies on the RHEL server
-            npm start   # Start the application (Make sure npm start is configured properly)
+      # Step 4: Run code
+      - name: Run code
+        run: | 
+          npm test  # This will run the tests defined in your package.json file
+          npm run start
