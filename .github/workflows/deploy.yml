@@ -27,4 +27,5 @@ jobs:
       # Step 4: Run code
       - name: Run code
         run: | 
-          npm run start
+         pm2 delete ntx-test
+         pm2 --name ntx-test start npm -- start
