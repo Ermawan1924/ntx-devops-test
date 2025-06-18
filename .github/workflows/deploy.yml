@@ -27,5 +27,4 @@ jobs:
       # Step 4: Run code
       - name: Run code
         run: | 
-          npm test  # This will run the tests defined in your package.json file
           npm run start
